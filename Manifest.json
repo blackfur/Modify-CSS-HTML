@@ -3,7 +3,7 @@
 
 	"name": "Modify-CSS-HTML",
 	"version": "0.1.0",
-	"description": "Improve Browsing",
+	"description": "Improve experience of Chrome",
 
 	"content_scripts": [
 		{
