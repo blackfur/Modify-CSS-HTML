@@ -1,11 +1,32 @@
 {
 	"manifest_version": 2,
-
 	"name": "Modify-CSS-HTML",
 	"version": "0.1.0",
 	"description": "Improve experience of Chrome",
+	"background": {
+		"scripts": ["download.js"]
+	},
+	"permissions": [
+		"downloads","contextMenus","<all_urls>"
+	],	
+	"browser_action": {
+		"default_title": "Modify-HTML-CSS",
+		"default_popup": "index.html"
+	},
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"windows": "Alt+M"
+			},
+			"description": "Active this extension"
+		}
+	},
 
 	"content_scripts": [
+		{
+			"css": ["hirogaru-nihongo-jp.css"],
+			"matches": ["*://hirogaru-nihongo.jp/*"]
+		},
 		{
 			"css": ["subtitles.css"],
 			"js": ["subtitles.js"],
@@ -16,5 +37,4 @@
 			"matches": ["https://www.bilibili.com/bangumi/play/*"]
 		}
 	]
-
 }
