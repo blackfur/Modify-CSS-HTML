@@ -4,10 +4,12 @@
 	"version": "0.1.0",
 	"description": "Improve experience of Chrome",
 	"background": {
-		"scripts": ["download.js"]
+		"scripts": ["download.js","speakit.js"]
+        , "persistent":false
 	},
 	"permissions": [
 		"downloads","contextMenus","<all_urls>"
+        ,"tts"
 	],	
 	"browser_action": {
 		"default_title": "Modify-HTML-CSS",
@@ -41,6 +43,10 @@
             "run_at": "document_start",
             "all_frames": true,
 			"matches": ["http://www.ktkkt.com/*"]
+		},
+		{
+			"js": ["speak-txt-content-script.js"],
+			"matches": ["<all_urls>"]
 		}
 	]
 }
