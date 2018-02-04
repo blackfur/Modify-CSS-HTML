@@ -37,7 +37,7 @@
 			"matches": ["https://www.bilibili.com/bangumi/play/*"]
 		},
 		{
-			"js": ["ktkkt.com.js"],
+			"js": ["lib/AdBlock.js","ktkkt.com.js"],
             "run_at": "document_start",
             "all_frames": true,
 			"matches": ["http://www.ktkkt.com/*"]
